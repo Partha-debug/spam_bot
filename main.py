@@ -15,7 +15,9 @@ def start_spamming():
 
 
 if __name__ == "__main__":
-   
-    show_instructions()
-    start_spamming() 
-
+    try:
+        show_instructions()
+        start_spamming() 
+    except Exception as e:
+        print("Something went wrong... Please try again with different settings.")
+        print(f"Error details: {e}")
